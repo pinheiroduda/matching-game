@@ -1,9 +1,14 @@
 import './style.css'
 import CardGame from '../CardGame'
 
+
 function CardFrontBack() {
+  window.CardFrontBack = {}
+  window.CardFrontBack.handleClick = () => {
+    console.log('Foi')
+  }
   return `
-    <article class="card-front-back">
+    <article class="card-front-back" onClick="CardFrontBack.handleClick()">
       <div class="card -front">
         ${CardGame()}
       </div>
