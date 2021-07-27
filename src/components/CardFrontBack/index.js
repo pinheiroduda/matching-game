@@ -3,12 +3,15 @@ import CardGame from '../CardGame'
 
 
 function CardFrontBack() {
-  window.CardFrontBack = {}
-  window.CardFrontBack.handleClick = () => {
-    console.log('Foi')
+  window.cardFrontBack = {}
+  window.cardFrontBack.handleClick = (event) => {
+    const $origin = event.target
+    const $cardFrontBack = $origin.parentNode.parentNode.parentNode
+
+    $cardFrontBack.classList.add('-active')
   }
   return `
-    <article class="card-front-back" onClick="CardFrontBack.handleClick()">
+    <article class="card-front-back" onClick="cardFrontBack.handleClick(event)">
       <div class="card -front">
         ${CardGame()}
       </div>
