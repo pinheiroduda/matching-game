@@ -7,9 +7,10 @@ function CardFrontBack() {
   window.cardFrontBack.handleClick = (event) => {
     const $origin = event.target
     const $cardFrontBack = $origin.closest('.card-front-back')
-
-    $cardFrontBack.classList.add('-active')
+   
+    $cardFrontBack.classList.toggle('-active')
   }
+
   return `
     <article class="card-front-back" onClick="cardFrontBack.handleClick(event)">
       <div class="card -front">
